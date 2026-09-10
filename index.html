@@ -3,11 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quorra</title>
+  <meta
+    name="description"
+    content="Quorra is a browser extension for authoring interaction skills for GUI agents in visual analytics systems."
+  >
+  <title>Quorra: Authoring Interaction Skills for GUI Agents in Visual Analytics Systems</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-  <h1>Quorra</h1>
-  <p>Project page under construction.</p>
+  <header class="hero">
+    <div class="hero__content">
+      <h1>Quorra: Authoring Interaction Skills for GUI Agents in Visual Analytics Systems</h1>
+      <p class="submission-status">Anonymous Submission</p>
+
+      <div class="resource-links" aria-label="Project resources">
+        <a
+          class="resource-button"
+          href="https://anonymous.4open.science/r/Quorra-37F8/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Quorra Code</a>
+        <button class="resource-button resource-button--disabled" type="button" disabled>
+          Grounding Benchmark
+        </button>
+        <button class="resource-button resource-button--disabled" type="button" disabled>
+          Demo
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <figure class="teaser">
+      <img
+        src="assets/images/quorra-teaser.png"
+        width="2878"
+        height="1528"
+        alt="Overview of the Quorra interface for authoring and testing interaction skills."
+      >
+    </figure>
+
+    <section class="abstract" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">Abstract</h2>
+      <p>
+        Visual analytics (VA) systems combine computational methods with interactive visual
+        representations to support reasoning over complex data. Recent advances in Vision-Language
+        Model (VLM)-based GUI agents offer new opportunities for agents to operate existing VA
+        systems and reuse the analytical capabilities embedded in their interfaces. However,
+        domain-specific VA systems often employ customized visual representations and interactions
+        whose semantics cannot be inferred from appearance alone. A GUI agent must understand not
+        only which elements are interactive, but also what actions they support, under what
+        conditions those actions are valid, and how they affect the analytical state. Such
+        interaction semantics can be encoded as reusable agent skills, but authoring these skills
+        remains difficult. We present Quorra, a browser extension for authoring interaction skills
+        for GUI agents in existing VA systems. Quorra first analyzes a VA interface to generate an
+        initial skill that describes views, groups of interactive elements, and supported actions.
+        Developers can inspect and revise the skill, define constraints on available views and
+        interactions, and step through interactions to annotate elements that appear only after the
+        interface state changes. Quorra also provides a testing environment in which developers can
+        run a GUI agent and inspect its execution traces to verify the effectiveness of the authored
+        skills. We evaluate Quorra through quantitative experiments across multiple VA systems and
+        case studies with VA developers, examining how authored skills influence agent interaction
+        performance and how Quorra supports the skill authoring process.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
