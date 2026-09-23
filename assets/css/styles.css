@@ -108,14 +108,28 @@ main {
   height: auto;
 }
 
-.abstract {
+.abstract,
+.method,
+.results,
+.demo {
   width: 100%;
   max-width: 1180px;
-  margin: 0 auto;
   padding: 0 1.5rem;
 }
 
+.abstract {
+  margin: 0 auto;
+}
+
+.method,
+.results,
+.demo {
+  margin: 3.5rem auto 0;
+}
+
 .abstract h2,
+.method h2,
+.results h2,
 .demo h2 {
   margin: 0 0 1.5rem;
   color: #333333;
@@ -126,7 +140,9 @@ main {
   text-align: center;
 }
 
-.abstract p {
+.abstract p,
+.method p,
+.results p {
   margin: 0;
   color: #4a4a4a;
   font-size: 1.0625rem;
@@ -134,11 +150,112 @@ main {
   text-align: left;
 }
 
-.demo {
+.method__figure {
+  margin: 0 0 1.5rem;
+}
+
+.method__figure img {
+  display: block;
   width: 100%;
-  max-width: 1180px;
-  margin: 3.5rem auto 0;
-  padding: 0 1.5rem;
+  height: auto;
+}
+
+.results__table-wrap {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  container-type: inline-size;
+}
+
+.results__table-wrap:focus-visible {
+  outline: 3px solid #2b7bbb;
+  outline-offset: 3px;
+}
+
+.results table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+  color: #3f3f3f;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.results caption {
+  width: 100cqw;
+  margin-bottom: 0.75rem;
+  color: #4a4a4a;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.results th,
+.results td {
+  padding: 0.6875rem 0.75rem;
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.results thead th {
+  color: #333333;
+  background: #f3f3f3;
+  font-weight: 600;
+}
+
+.results thead tr:first-child th {
+  border-top: 1px solid #c9c9c9;
+}
+
+.results thead tr:last-child th,
+.results thead th[rowspan] {
+  border-bottom-color: #b8b8b8;
+}
+
+.results tbody th {
+  color: #333333;
+  font-weight: 500;
+  text-align: left;
+}
+
+.results tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.results a {
+  color: #17689b;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.results a:hover {
+  color: #0e4e78;
+}
+
+.results a:focus-visible {
+  outline: 2px solid #2b7bbb;
+  outline-offset: 2px;
+}
+
+.results .results__quorra,
+.results__overall th,
+.results__overall td {
+  font-weight: 600;
+}
+
+.results__overall {
+  border-top: 2px solid #8a8a8a;
+  background: #f3f3f3;
+}
+
+.results__overall td,
+.results__overall th {
+  border-bottom-color: #c9c9c9;
+}
+
+.demo {
   scroll-margin-top: 1.5rem;
 }
 
@@ -168,10 +285,14 @@ main {
   }
 
   .abstract,
+  .method,
+  .results,
   .demo {
     padding: 0 1.25rem;
   }
 
+  .method,
+  .results,
   .demo {
     margin-top: 3rem;
   }
@@ -207,22 +328,35 @@ main {
   }
 
   .abstract,
+  .method,
+  .results,
   .demo {
     padding: 0 1rem;
   }
 
   .abstract h2,
+  .method h2,
+  .results h2,
   .demo h2 {
     font-size: 1.75rem;
   }
 
-  .abstract p {
+  .abstract p,
+  .method p,
+  .results p {
     font-size: 1rem;
     line-height: 1.6;
   }
 
+  .method,
+  .results,
   .demo {
     margin-top: 2.5rem;
+  }
+
+  .results table,
+  .results caption {
+    font-size: 0.875rem;
   }
 }
 

@@ -71,6 +71,214 @@
       </p>
     </section>
 
+    <section class="method" aria-labelledby="method-heading">
+      <h2 id="method-heading">Method</h2>
+      <figure class="method__figure">
+        <img
+          src="assets/images/overall-workflow.jpg"
+          width="4176"
+          height="1952"
+          loading="lazy"
+          alt="Quorra workflow for constructing, reviewing, refining, and testing interaction skills."
+        >
+      </figure>
+      <p>
+  Quorra first constructs an initial interaction skill from the rendered VA interface and its DOM (A1), partitioning the interface into detected views (A2) and organizing interactive elements within each view into groups represented by annotated elements (A3).
+  The inferred skill is then presented for review and refinement (B), where matching identifiers connect annotated elements in the VA interface (B1) with their corresponding entries and supported actions in the side panel (B2).
+  Users can probe an interaction to reveal elements that appear only after the execution of that interaction.
+  In the example, vertically scrolling the flow container (d1) reveals additional Sankey groups (d7--d9), and clicking a Sankey link from d7 further reveals a detail popup with new groups (d10--d11).
+  The refined skill can then be tested with a natural-language instruction (C1).
+  The main agent reasons over the complete interface and selects the relevant view (C2), while the subagent operates within that view using its associated interaction skill (C3).
+  The execution trace (C4) records the resulting steps; here, the agent selects the Adversarial Flow view (d), scrolls d1, and clicks a Sankey link belonging to d7 group to open the requested line-chart panel.
+      </p>
+    </section>
+
+    <section class="results" aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <div
+        class="results__table-wrap"
+        role="region"
+        aria-label="Technical evaluation results"
+        tabindex="0"
+      >
+        <table>
+          <caption>Strict and action accuracy across 10 VA systems and 500 tasks.</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">System</th>
+              <th scope="col" rowspan="2">Source</th>
+              <th scope="colgroup" colspan="2">Strict Accuracy (%)</th>
+              <th scope="colgroup" colspan="2">Action Accuracy (%)</th>
+            </tr>
+            <tr>
+              <th class="results__quorra" scope="col">Quorra</th>
+              <th scope="col">Full Interface</th>
+              <th class="results__quorra" scope="col">Quorra</th>
+              <th scope="col">Full Interface</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">AdversaFlow</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/TVCG.2024.3456150"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >VIS'24</a>
+              </td>
+              <td class="results__quorra">72.0</td>
+              <td>50.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>88.0</td>
+            </tr>
+            <tr>
+              <th scope="row">CIME</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1186/s13321-022-00600-z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >J. Cheminformatics'22</a>
+              </td>
+              <td class="results__quorra">82.0</td>
+              <td>70.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>88.0</td>
+            </tr>
+            <tr>
+              <th scope="row">FairVis</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/VAST47406.2019.8986948"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >VAST'19</a>
+              </td>
+              <td class="results__quorra">88.0</td>
+              <td>70.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>96.0</td>
+            </tr>
+            <tr>
+              <th scope="row">Githru</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/TVCG.2020.3030414"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >VIS'20</a>
+              </td>
+              <td class="results__quorra">68.0</td>
+              <td>54.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>90.0</td>
+            </tr>
+            <tr>
+              <th scope="row">HardVis</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1111/cgf.14726"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >CGF'23</a>
+              </td>
+              <td class="results__quorra">74.0</td>
+              <td>48.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>84.0</td>
+            </tr>
+            <tr>
+              <th scope="row">IDMVis</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/TVCG.2018.2865076"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >VIS'18</a>
+              </td>
+              <td class="results__quorra">78.0</td>
+              <td>58.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>90.0</td>
+            </tr>
+            <tr>
+              <th scope="row">Phandango</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1093/bioinformatics/btx610"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Bioinformatics'18</a>
+              </td>
+              <td class="results__quorra">52.0</td>
+              <td>36.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>86.0</td>
+            </tr>
+            <tr>
+              <th scope="row">TacticFlow</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/TVCG.2021.3114832"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >VIS'21</a>
+              </td>
+              <td class="results__quorra">72.0</td>
+              <td>58.0</td>
+              <td class="results__quorra">98.0</td>
+              <td>88.0</td>
+            </tr>
+            <tr>
+              <th scope="row">TraSculptor</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/TVCG.2025.3532498"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >VIS'25</a>
+              </td>
+              <td class="results__quorra">72.0</td>
+              <td>36.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>48.0</td>
+            </tr>
+            <tr>
+              <th scope="row">VIOLET</th>
+              <td>
+                <a
+                  href="https://doi.org/10.1109/TVCG.2024.3388557"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >TVCG'24</a>
+              </td>
+              <td class="results__quorra">78.0</td>
+              <td>38.0</td>
+              <td class="results__quorra">100.0</td>
+              <td>72.0</td>
+            </tr>
+            <tr class="results__overall">
+              <th scope="row">Overall</th>
+              <td>-</td>
+              <td class="results__quorra">73.6</td>
+              <td>51.8</td>
+              <td class="results__quorra">99.8</td>
+              <td>83.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Quorra achieved higher Strict Accuracy than the Full Interface baseline on all 10 VA systems.
+        Across all 500 tasks, Strict Accuracy increased from 51.8% to 73.6%, with gains ranging from
+        12 percentage points on CIME to 40 points on VIOLET. Action Accuracy increased from 83.0% to
+        99.8%, with Quorra producing the correct action type for 499 of 500 tasks. These results
+        indicate that routing instructions through the authored view structure and grounding actions
+        within a focused visual region improves interaction execution across heterogeneous VA systems.
+      </p>
+    </section>
+
     <section class="demo" id="demo" aria-labelledby="demo-heading">
       <h2 id="demo-heading">Demo</h2>
       <video width="1920" height="1018" controls preload="metadata" playsinline>
